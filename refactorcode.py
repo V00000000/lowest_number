@@ -8,6 +8,12 @@ class TextAnalyzer:
         print(f"Word count: {count}")
         return count
 
+    class FileSaver:
+        def save(self,filename, text):
+            with open(filename, "w")as f:
+                f.write(text)
+                print(f"Text saved to ({filename})")
+
     def save_text_to_file(self, filename):
         with open(filename, "w") as f:
             f.write(self.text)
